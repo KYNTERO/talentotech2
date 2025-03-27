@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+HU:wght@100..400&display=swap');
+
+*{
+  font-family: 'Dancing Script', cursive;
+}
+
+body {
+  background: url('https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9uZG9zJTIwZGUlMjBwYW50YWxsYSUyMGhkJTIwcGFyYSUyMHBjfGVufDB8fDB8fHww');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* Contenedor principal */
+.contenedor {
+  margin-left: 10px;
+  display: flex; /* Activa Flexbox */
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+  gap: 20px; /* Espacio entre la imagen y el texto */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+/* Estilos para la imagen */
+.imagen img {
+  min-width: 400px; /* Ancho máximo de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 8px; /* Suavizar Bordes (opcional) */
+}
+
+/* Estilos para el texto */
+.definicion {
+  flex: 1; /* Hace que el texto ocupe el espacio restante */
+}
+
+/* Estilos para el título de la lista */
+.titulolista {
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+
+fieldset {
+  /* fieldset => Es la línea que nos aparece en el formulario. */
+  background: linear-gradient(45deg, rgb(103, 193, 106), white);
+  display: inline-block;
+  padding: 10px; /* Espacio interno (opcional) */
+  border: 1px solid #ccc; /* Borde del fieldset (opcional) */
+  border-radius: 5px; /* Bordes redondeados (opcional) */
+}
+
+/* Estilos para los inputs */
+input {
+  width: auto; /* El ancho se ajusta al contenido */
+  margin-left: 10px; /* Espacio entre el label y el input */
+}
+
+
+/* Estilos para los labels */
+label {
+  display: inline-block; /* Alinea los labels correctamente */
+  width: 80px; /* Ancho fijo para los labels (opcional) */
+  text-align: right; /* Alinea el texto de los labels a la derecha */
+  margin-right: 10px; /* Espacio entre el label y el input */
+}
+/* .caja_1{
+  background-color: red;
+}
+.caja_2{
+  background-color: blue;
+}
+.caja_3{
+  background-color: red;
+}
+
+.display{
+  display: inline;
+} */
