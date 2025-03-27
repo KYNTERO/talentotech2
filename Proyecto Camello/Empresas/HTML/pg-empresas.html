@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexión Camello</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" href="../Imagenes/favicon.png">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-contenedor">
+            <img src="../Imagenes/Logoh.png" alt="Conexión Camello" class="logo">
+            <nav class="nav-links">
+                <div class="nav-item">
+                    <a href="../../Inicio/Inicio.html" class="nb">Inicio</a>
+                </div>
+                <div class="nav-item">
+                    <a href="" class="nb">Conoce más</a>
+                    <div class="dropdown-menu">
+                        <a href="../../Historia/HTML/conocemas.html">Historia</a>
+                        <a href="../../Estadisticas/Estadisticas/Estadisticas.html">Estadísticas</a>
+                        <a href="../../Evalua tu emprendimiento/HTML/evalua-tu-emprendimiento.html">Evalúa tu emprendimiento</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="../HTML/pg-empresas.html" class="nb active">Empresas</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../../Fundaciones/Fundaciones.html" class="nb">Fundaciones</a>
+                </div>
+                <i class="fas fa-user-circle"></i>
+            </nav>
+        </div>
+    </header>    
+
+    <main>
+        <section class="carrusel">
+            <div class="carrusel-contenedor">
+                <div class="slide active">
+                <img src="../Imagenes/Tostao-carrusel.jpg" alt="Imagen 1">
+                </div>
+                <div class="slide">
+                    <img src="../Imagenes/Sr-Wonk-carrusel.jpeg" alt="Imagen 2">
+                </div>
+                <div class="slide">
+                    <img src="../Imagenes/iberia-carrusel.jpg" alt="Imagen 3">
+                </div>
+            </div>
+            <div class="puntos">
+                <span class="punto active" onclick="irASlide(0)"></span>
+                <span class="punto" onclick="irASlide(1)"></span>
+                <span class="punto" onclick="irASlide(2)"></span>
+            </div>
+        </section>
+        
+    <section class="intro">
+        <h2>Oportunidades que transforman vidas</h2>
+        <p>Superar una adicción es solo el primer paso; la verdadera recuperación ocurre cuando hay oportunidades para reconstruir el futuro. Las empresas aquí presentadas creen en las segundas oportunidades, brindando empleo y apoyo a quienes buscan reinsertarse en la sociedad.<br>Descubre cómo están cambiando vidas y creando un impacto real.</p>
+    </section>
+    <section class="impacto">
+        <div class="dato">
+            <h3>El empleo reduce la decaída</h3>
+            <p>Cuando una persona en rehabilitación consigue empleo tiene hasta un 50% menor probabilidad de recaer frente a aquellos que no trabajan.</p>
+            <blockquote>Journal of Substance Abuse Treatment</blockquote>
+        </div>
+        <div class="testimonio">
+            <blockquote>“Nos dejamos llevar por los prejuicios, nos limitamos a ver lo que está al frente, sin generar una conexión emotiva y real con las personas que nos rodean para entender el trasfondo de las circunstancias. Brindar segundas oportunidades es derribar esa barrera”</blockquote>
+            <p>-Pedro Gasca, orientador general de BBI Colombia-</p>
+        </div>
+        <div class="dato">
+            <h3>Percepción laboral y compromiso</h3>
+            <p>Alrededor del 65% de las empresas que apoyan la reinserción laboral destacan el compromiso y desempeño de estos empleados.</p>
+            <blockquote>National Safety Council</blockquote>
+        </div>
+
+    </section>
+    <section class="empresa bbi">
+        <div class="nombre-empresa">BBI Colombia S.A.S</div>
+        <div class="presentacion">BBI Colombia S.A.S. es la empresa detrás de Tostao' Café & Pan, una reconocida cadena de panaderías y cafeterías en Colombia. Desde su creación, ha revolucionado el mercado con productos de alta calidad a precios accesibles, permitiendo que más personas disfruten de buen café y panadería. Con cientos de puntos de venta en el país, Tostao' se ha convertido en una marca cercana y confiable para los colombianos.</div>
+        <div class="imagen"><img src="../Imagenes/Tostao-empresa" alt="Tostao"></div>
+        <div class="descripcionn">BBI Colombia S.A.S. es la empresa detrás de Tostao' Café & Pan, una reconocida cadena de panaderías y cafeterías en Colombia. Desde su creación, ha revolucionado el mercado con productos de alta calidad a precios accesibles, permitiendo que más personas disfruten de buen café y panadería. Con cientos de puntos de venta en el país, Tostao' se ha convertido en una marca cercana y confiable para los colombianos</div>
+        <div class="contacto">
+            <form class="contacto-form"> <h3>¡Contactanos!</h3>
+            <input type="text" placeholder="Tu Nombre" title="Proporciona tu nombre" required>
+            <input type="email" placeholder="Tu Correo" title="Proporciona tu correo" required>
+            <textarea placeholder="Tu Mensaje" title="Descripción" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        </div>
+    </section>
+    
+    <section class="empresa srwonk">
+        <div class="nombre-empresa">Sr. Wok</div>
+        <div class="presentacion">
+            Sr. Wok nació en 2014, fundado por Juan Felipe Restrepo Calle y Jorge Andrés Díaz Lozano, con el propósito de ofrecer comida oriental rápida, saludable y accesible. Desde entonces, ha crecido hasta convertirse en una de las principales cadenas del país.
+        </div>
+        <div class="imagen"><img src="../Imagenes/Sr-Wonk-empresa.jpg" alt="SrWonk"></div>
+            <div class="descripcion">A través de una alianza con la Fundación Teatro Interno, Sr. Wok genera oportunidades laborales para personas en proceso de rehabilitación, brindándoles una segunda oportunidad para reconstruir su vida. <br> Este programa no solo facilita su reinserción social, sino que también fomenta el desarrollo de habilidades, la estabilidad financiera y la confianza en sí mismos. Al integrarlos en un entorno laboral inclusivo, Sr. Wok contribuye a la reducción de la reincidencia y al fortalecimiento de comunidades vulnerables, demostrando que <strong> el trabajo digno puede transformar vidas.</strong></div>
+            <div class="contacto">
+                <div class="contacto">
+                    <div class="contacto-contenedor">
+                        <div class="mapa">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55557.18015365725!2d-75.63327398899675!3d6.3076722459753665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442f9a13da8bc7%3A0xf4884c5e62d3d528!2sSr.%20wok!5e0!3m2!1ses!2sco!4v1742949728627!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+
+                        <div class="datos-contacto">
+                            <h3>Contáctanos</h3>
+                            <p><strong>Dirección:</strong>Dg. 55 #34-67, Hermosa Provincia, Bello, Medellín, Doce de Octubre, Bello, Antioquia</p>
+                            <p><strong>Teléfono:</strong>+57 320 7125392</p>
+                            <p><strong>Email:</strong> servicioalcliente@srwok.com</p>
+                            <hr>
+                            <p class="redes"><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-x-twitter"></i> <i class="fa-brands fa-youtube"></i></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+    
+   <section class="empresa iberia">
+    <div class="nombre-empresa">Iberia</div>
+    <div class="imagen">
+        <img src="../Imagenes/Iberia-empresa.jpg" alt="Iberia">
+    </div>
+    <div class="presentacion">
+        Iberia es una de las aerolíneas más reconocidas a nivel mundial, con más de 90 años de trayectoria uniendo personas y culturas a través de sus vuelos. Como parte del grupo IAG, opera en más de 130 destinos y <strong>se distingue por su compromiso con la sostenibilidad, la innovación y la responsabilidad social.</strong>
+    </div>
+    <div class="descripcion">
+        En su misión de generar un impacto positivo, en conjunto con Fundación Integra, Iberia desarrolla programas de inclusión laboral en alianza con organizaciones que apoyan la inserción laboral de personas rehabilitadas. A través de formación especializada y voluntariado corporativo, <strong>la aerolínea facilita el acceso al empleo, promoviendo un ambiente laboral más diverso e inclusivo.</strong>
+    </div>
+    <div class="contacto"><div class="testimonios">
+        <h3>Testimonios</h3>
+        <div class="testimoniob">
+            <p>“Gracias a Iberia, encontré una oportunidad de trabajo después de mi rehabilitación. ¡Me dieron una nueva oportunidad de vida!”</p>
+            <span>- Juan Pérez</span>
+        </div>
+        <div class="testimoniob">
+            <p>“Trabajar aquí me ha permitido crecer profesionalmente y sentirme parte de una comunidad inclusiva.”</p>
+            <span>- María Gómez</span>
+        </div>
+        <div class="testimoniob">
+            <p>"Después de salir de rehabilitación, tenía miedo de no encontrar trabajo. Gracias a esta oportunidad, recuperé mi confianza y ahora tengo estabilidad laboral."</p>
+            <span>- Angel Correa</span>
+        </div>
+        <div class="testimoniob">
+            <p>"Tras una epoca realmente oscura en mi vida, gracias a Iberia y su apoyo incodicional, logre encontrar un lugar del que me siento parte."</p>
+            <span>- Dairo Andres</span>
+        </div>
+        <div class="testimoniob">
+            <p>"Nunca pensé que una empresa confiaría en mí. Aquí me han tratado con respeto y me han dado herramientas para avanzar en mi vida personal y profesional."</p>
+            <span>- Juan Montero</span>
+        </div>
+        <div class="testimoniob">
+            <p>“Iberia me dio la oportunidad de demostrar que podía cambiar. Me formaron, me apoyaron y hoy soy parte de una empresa que realmente cree en la inclusión laboral.”</p>
+            <span>- Jose Rivera</span>
+        </div>
+    </div>
+    </div>
+</section>
+
+    <footer>
+        <div class="Contenedor-pdg">
+            <div class="seccion Nosotros">
+                <h3>NOSOTROS</h3>
+                <img src="../Imagenes/Logoh.png" alt="Conexión Camello" class="h">
+                <p>¡Aquí hay camello, entrale al parche!</p>
+                <i class="fa-solid fa-lock" style="font-size: 16px; color: #6a9bc0;"></i> AVISO DE PRIVACIDAD
+            </div>
+            
+            <div class="seccion actividades">
+                <h3>ACTIVIDADES</h3>
+                <ul>
+                    <li class="actividad">
+                        <img src="../Imagenes/actividad1.jpeg" alt="Actividad 1" class="act">
+                        <p>Somos conectores entre instituciones educativas y fundaciones de rehabilitación.</p>
+                    </li>
+                    <li class="actividad">
+                        <img src="../Imagenes/actividad2.jpeg" alt="Actividad 2" class="act">
+                        <p>Creemos en la formación académica como un pilar fundamental para la reinserción laboral.</p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="seccion contactos">
+                <h3>CONTÁCTANOS</h3>
+                <p><i class="fa fa-thumb-tack" style="font-size: 16px; color: #6a9bc0;"></i> Carrera 50 #32-15, Torre Empresarial Conexión, Piso 8, Medellín, Antioquia, Colombia</p>
+                <p><i class="fa fa-phone" style="font-size: 16px; color: #6a9bc0;"></i> Línea principal: +57 604 555 1234</p>
+                <p><i class="fa fa-envelope-open" style="font-size: 16px; color: #6a9bc0;"></i> <a href="mailto:fundacion@conexioncamello.org" target="_blank">fundacion@conexioncamello.org</a></p>
+            </div>
+        </div>
+        
+        <div class="pabajo">
+            <div class="Copy">
+                <p>© Conexión Camello – Colombia 2025. Todos los derechos reservados.</p>
+            </div>
+            <div class="Redes">
+                <i class="sm fa-brands fa-facebook"></i>
+                <i class="sm fa-brands fa-instagram"></i>
+                <i class="sm fa-brands fa-x-twitter"></i>
+                <i class="sm fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/script.js"></script> 
+
+</body>
+</html>
