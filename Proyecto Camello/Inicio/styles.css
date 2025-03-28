@@ -1,0 +1,491 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D5F4AD; /* Fondo más suave para toda la página */
+}
+
+/* Cabecera --------------------------------------------------------------------------------------------------------*/
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    height: 3.75rem;
+    top: 0;
+    left: 0;
+    background: #222222;
+    padding: 1rem 0;
+    z-index: 1000;
+}
+.nav-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+.logo {
+    height: 3.75rem;
+    width: auto;
+}
+.nav-links {
+    display: flex;
+    gap: 1.25rem;
+    position: relative;
+}
+.nav-item {
+    position: relative;
+    cursor: pointer;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.125rem;
+    padding: 0.3125rem 0.625rem;
+    display: block;
+    position: relative;
+}
+.nav-links a:hover {
+    /*color: white#6a9bc0;*/
+    text-decoration: none;
+}
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.125rem;
+    background: #6a9bc0;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    transform: scaleX(1);
+}
+
+.nav-links a:active{
+    color: #6a9bc0;
+}
+
+/* Menú desplegable */
+.nav-item:nth-child(2) .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: top;
+    background: rgba(0, 0, 0, 0.8);
+    min-width: 9.375rem;
+    width: max-content;
+    padding: 0.3125rem 0;
+    border-radius: 0.3125rem;
+    box-shadow: 0rem 0.25rem 0.625rem rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    white-space: nowrap;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 0.5rem 0.9375rem;
+    font-size: 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background: #6a9bc0;
+}
+
+.nav-item:nth-child(2):hover .dropdown-menu {
+    transform: translateX(-50%) scaleY(1);
+    opacity: 1;
+    max-height: 18.75rem;
+}
+
+
+/* Banner de noticias --------------------------------------------------------------------------------------*/
+
+.banner {
+    background-color: #D5F4AD;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 5.7rem;
+    overflow: hidden;
+}
+
+.carrusel-contenedor {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.carrusel-slide {
+    min-width: 100%;
+    position: relative;
+}
+.carrusel-slide img {
+    width: 100%;
+    max-height: 700px;
+    object-fit: cover;
+}
+/*.carrusel-slide img {
+    width: 100%;
+    height: 31.25rem;
+    object-fit: cover;
+}*/
+
+/* Puntos del carrusel */
+.puntos {
+    position: absolute;
+    bottom: 0.9375rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.punto {
+    width: 1.125rem;
+    height: 1.125rem;
+    background: #bbb;
+    border-radius: 50%;
+    margin: 0 0.3125rem;
+    cursor: pointer;
+}
+
+.punto.active {
+    background: #6A9DC0;
+}
+
+.punto:hover {
+    transform: scale(1.2);
+    transition: transform 0.4s;
+}
+
+
+/*Quienes somos----------------------------------------------------------------------------------------------*/
+
+/* Contenedor de secciones */
+.section-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 20px; /* Margen adecuado */
+    flex-wrap: nowrap; /* Evita que las secciones se envuelvan en filas, siempre estarán en una sola fila */
+    gap: 20px; /* Añadimos espacio entre las secciones */
+}
+
+/* Sección individual */
+.section {
+    padding: 30px; /* Aumentamos el padding para mayor espacio interno */
+    border: 5px double #A8D8FF;
+    border-radius: 8px;
+    background-color: white;
+    width: 30%; /* Ajustamos el ancho para que tres secciones encajen en una fila */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease-in-out;
+}
+
+.section:hover {
+    transform: scale(1.05); /* Efecto hover para agrandar ligeramente */
+}
+
+/* Títulos de las secciones */
+.section h2 {
+    font-size: 2rem; /* Aumentamos el tamaño de la fuente */
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Párrafos dentro de las secciones */
+.section p {
+    font-size: 1.1rem;
+    color: #555;
+    text-align:justify;
+    line-height: 1.8; /* Aumentamos el interlineado para mayor legibilidad */
+}
+
+/* Asegurarse de que todo se vea bien en pantallas pequeñas */
+@media (max-width: 1024px) {
+    .section {
+        width: 32%; /* Ajustamos el ancho para pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column; /* En pantallas muy pequeñas, cambiamos a una disposición en columna */
+        gap: 10px; /* Reducimos el espacio entre las secciones */
+    }
+
+    .section {
+        width: 100%; /* En pantallas pequeñas, cada sección ocupa todo el ancho disponible */
+        margin: 0; /* Quitamos el margen entre secciones para aprovechar todo el ancho */
+    }
+}
+
+/* Contenedor de historias (grid) -----------------------------------------------------------------------*/
+
+.historias {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    padding: 0 20px; /* Padding para evitar que las imágenes toquen los bordes */
+    box-sizing: border-box;
+}
+
+/* Contenedor de las imágenes individuales */
+.imagenes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap; /* Asegura que las imágenes estén en una sola fila */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    box-sizing: border-box;
+}
+
+/* Cada imagen */
+.imagen {
+    position: relative;
+    width: 32%; /* Aumentamos el tamaño a 32% para que las tres quepan en la fila */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que la imagen se salga del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+/* Estilos de la imagen */
+.imagen img {
+    width: 100%;
+    height: 500px; /* Aumento la altura para hacer las imágenes más grandes */
+    object-fit: cover; /* Mantiene las proporciones de la imagen sin deformarla */
+    display: block;
+}
+
+/* Estilo del texto sobre la imagen */
+.imagen p {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    padding: 10px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Efecto de hover (al pasar el ratón sobre la imagen) */
+.imagen:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño de la imagen */
+}
+
+/* Responsividad: hacer que las imágenes se ajusten en dispositivos más pequeños */
+@media (max-width: 768px) {
+    .imagenes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagen {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Pie de página ------------------------------------------------------------------------------------------------*/
+footer {
+    width: 100%;
+    background-color: #222;
+    color: white;
+    padding: 2.5rem 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    font-family: Open Sans;
+}
+
+
+.Contenedor-pdg {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.25rem;
+    max-width: 85rem;
+    margin: auto;
+}
+
+
+.seccion {
+    flex: 1;
+    min-width: 18.75rem;
+    margin: 3%;
+    text-align: left;
+}
+
+
+.h {
+    width: 17.5rem !important;
+    height: 5rem;
+    opacity: 0.9;
+}
+
+
+.seccion h3 {
+    color: #ecf7ff;
+    margin-bottom: 0.9375rem;
+}
+
+
+.seccion img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.3125rem;
+    margin-right: 0.625rem;
+}
+
+
+.act {
+    opacity: 0.6;
+}
+
+
+.seccion ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.seccion ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.625rem;
+}
+
+
+.actividad:hover {
+    color: #6a9bc0;
+    text-decoration: underline;
+    transition: all 0.3s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Pie de página abajo */
+.pabajo {
+    padding: 0.9375rem 3.125rem;
+    border-top: 0.03125rem solid #6a62625e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 80%;
+}
+
+
+.Copy {
+    font-size: 1rem;
+}
+
+
+.Redes {
+    display: flex;
+    justify-content: right;
+    gap: 0.9375rem;
+    flex-wrap: wrap;
+}
+
+
+.sm, .fas {
+    font-size: 1.875rem;
+    color: white;
+}
+
+
+.sm:hover, .fas:hover {
+    color: #6a9bc0;
+    transform: scale(1.2);
+    text-shadow: 0.0625rem 0.6875rem 1.25rem #6a9bc085;
+    transition: all 0.8s;
+    cursor: pointer;
+}
+
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .section-container,
+    .grid {
+        flex-direction: column; /* Los elementos se apilan en dispositivos más pequeños */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .section, .box {
+        width: 80%; /* Aumenta el tamaño de los elementos para pantallas pequeñas */
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em; /* Reducir tamaño del título en pantallas más pequeñas */
+    }
+    footer p {
+        font-size: 0.9em; /* Reducir tamaño del pie de página en pantallas más pequeñas */
+    }
+}
+@media (max-width: 48rem) {
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+
+    .Contenedor-pdg {
+        flex-direction: column;
+        text-align: left;
+    }
+
+
+    .pabajo {
+        flex-direction: column;
+        text-align: left;
+        gap: 0.625rem;
+    }
+
+
+    .Redes {
+        justify-content: left;
+    }
+}
